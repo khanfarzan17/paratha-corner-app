@@ -1,0 +1,289 @@
+:root {
+  --bg: #0d0d0d;
+  --card: #151515;
+  --line: #2a2a2a;
+  --or: #f28a12;
+  --tx: #f4efe6;
+  --mu: #a8a299;
+  --green: #6fdc98;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--tx);
+  font-family: "Poppins", system-ui, sans-serif;
+  line-height: 1.45;
+}
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: max(28px, env(safe-area-inset-top)) 18px 40px;
+}
+.header {
+  text-align: center;
+  padding-bottom: 8px;
+}
+h1 {
+  font-weight: 800;
+  font-size: clamp(1.9rem, 7vw, 2.8rem);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+h1 span {
+  color: var(--or);
+}
+.tagline {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  color: var(--or);
+  font-weight: 600;
+}
+.motto {
+  margin-top: 8px;
+  color: var(--mu);
+  font-size: 0.9rem;
+}
+.header .actions {
+  justify-content: center;
+  margin-top: 18px;
+}
+.menu-section {
+  margin-top: 30px;
+}
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 12px;
+  flex-wrap: wrap;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--or);
+}
+.subtitle {
+  font-size: 0.72rem;
+  color: var(--mu);
+  letter-spacing: 0.05em;
+}
+.rows {
+  list-style: none;
+}
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 11px 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+.row small {
+  color: var(--mu);
+  font-weight: 400;
+}
+.dots {
+  flex: 1;
+  border-bottom: 2px dotted #3a3a3a;
+  transform: translateY(-4px);
+  min-width: 12px;
+}
+.price {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--or);
+}
+.price.free {
+  color: var(--green);
+}
+.row.featured {
+  background: rgba(242, 138, 18, 0.1);
+  border-left: 3px solid var(--or);
+  margin: 0 -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 0 8px 8px 0;
+  align-items: center;
+}
+.tag {
+  margin-left: 8px;
+  font-style: normal;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--or);
+  color: #1a0d02;
+  padding: 2px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+.notes {
+  margin-top: 30px;
+  display: grid;
+  gap: 8px;
+  color: var(--mu);
+  font-size: 0.95rem;
+}
+.notes p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.notes svg {
+  color: var(--or);
+  flex: none;
+}
+.notes b {
+  color: var(--tx);
+}
+.contact {
+  margin-top: 30px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+}
+.contact .label {
+  margin-top: 14px;
+  color: var(--mu);
+  font-size: 0.9rem;
+}
+.phone {
+  display: block;
+  font-weight: 700;
+  font-size: clamp(2rem, 9vw, 2.6rem);
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.15;
+}
+.deliver {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 12px;
+  color: var(--mu);
+  font-size: 0.95rem;
+}
+.deliver svg {
+  color: var(--or);
+  flex: none;
+}
+.deliver b {
+  color: var(--tx);
+  font-weight: 600;
+}
+.contact .actions {
+  margin-top: 18px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font:
+    600 0.95rem "Poppins",
+    sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid var(--or);
+}
+.btn.ghost {
+  background: transparent;
+  color: var(--or);
+}
+.btn.whatsapp {
+  background: #25d366;
+  border-color: #25d366;
+  color: #04210f;
+  flex: 1 1 220px;
+  max-width: 320px;
+}
+.btn.whatsapp:hover {
+  background: #1fbe5a;
+  border-color: #1fbe5a;
+}
+.btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+.footer {
+  margin-top: 28px;
+  text-align: center;
+  color: #6d675f;
+  font-size: 0.8rem;
+}
+.footer .love {
+  font-style: italic;
+  color: var(--mu);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.desc {
+  display: block;
+  color: var(--mu);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.sold-out {
+  opacity: 0.5;
+}
+.sold-out .price {
+  color: var(--mu);
+  font-size: 0.9rem;
+}
+.combo-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.combo {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.num {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--or);
+  color: #1a0d02;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.combo h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.combo p {
+  color: var(--mu);
+  font-size: 0.82rem;
+}
+.combo .price {
+  font-size: 1.2rem;
+}
